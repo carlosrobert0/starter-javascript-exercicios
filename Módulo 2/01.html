@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>curso javascript</title>
+  </head>
+  <body>
+    <button>Add Quadrado</button>
+    <div id='app'>
+      
+    </div>
+
+
+    <script>
+      var addQuad = document.querySelector('button')
+      addQuad.onclick = function() {
+        var containerApp = document.querySelector('#app')
+        var newQuad = document.createElement('div')
+        newQuad.style.width = 100
+        newQuad.style.height = 100
+        newQuad.style.backgroundColor = '#f00'
+        newQuad.style.display = 'inline-block'
+        newQuad.style.marginLeft = 2
+
+        containerApp.appendChild(newQuad)
+      }
+    </script>
+  </body>
+</html>

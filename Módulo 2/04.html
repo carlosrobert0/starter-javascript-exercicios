@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>curso javascript</title>
+  </head>
+  <body>
+    <div id='app'>
+      <button>Adicionar</button>
+      <input type='text' name='nome'>
+      <ul>
+
+      </ul>
+    </div>
+
+
+    <script>
+      
+      var inputTxt = document.querySelector('input[name=nome]')
+      var btnElement = document.querySelector('button')
+
+      btnElement.onclick = function() {
+        var ul = document.querySelector('ul')
+        var text = inputTxt.value
+        var li = document.createElement('li')
+        li.append(text)
+        ul.appendChild(li)
+        inputTxt.value = ''
+      }
+      
+    </script>
+  </body>
+</html>

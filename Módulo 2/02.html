@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>curso javascript</title>
+  </head>
+  <body>
+    <button id='new'>Add Quadrado</button>
+    <div id='app'>
+      
+    </div>
+
+
+    <script>
+      var addQuad = document.querySelector('#new')
+      var containerApp = document.querySelector('#app')
+      
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF'
+        var color = '#'
+        for (var i = 0; i < 6; i++){
+          color += letters[Math.floor(Math.random() * 16)]
+        }
+        return color;
+      }
+
+      addQuad.onclick = function() {
+        var newQuad = document.createElement('div')
+
+        newQuad.style.width = 100
+        newQuad.style.height = 100
+        newQuad.style.backgroundColor = '#f00'
+
+        containerApp.appendChild(newQuad)
+
+        newQuad.onmouseover = function() {
+          newQuad.style.backgroundColor = getRandomColor()
+        }
+      }
+    </script>
+  </body>
+</html>
